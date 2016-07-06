@@ -1,10 +1,12 @@
+
+// appdynamics config
 var appd = require('appdynamics');
 require("appdynamics").profile({
   controllerHostName: 'ubuntuserver140412-scy42controller-0xv2hnal.srv.ravcloud.com',
   controllerPort: 8090,
   controllerSslEnabled: false,  // Set to true if controllerPort is SSL
   accountName: 'customer1',
-  accountAccessKey: 'd9d0ba04-6a9d-40c0-83bf-87ce162424cb', //required
+  accountAccessKey: '', //required
   applicationName: 'Node.JS Apps',
   tierName: 'Basic MSSQL',
   nodeName: 'node1',
