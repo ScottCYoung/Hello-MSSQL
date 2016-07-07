@@ -18,7 +18,7 @@ var dbConfig = {
   server: '192.168.1.171', // You can use 'localhost\\instance' to connect to named instance
   database: 'NodeSample',
   user: 'sa',
-  password: 'Scott10!',
+  password: '',
   port: 1433
 };
 
@@ -58,10 +58,9 @@ const PORT=8080;
 
 //We need a function which handles requests and send response
 function handleRequest(request, response){
-  //start appd transaction
-   var trx = appd.startTransaction('custom ms-sql call');
+   var trx = appd.startTransaction('custom ms-sql call');  //start appd transaction
 
-   var exit = trx.startExitCall({
+   var exit = trx.startExitCall({   //define and start appd exit call
      exitType: 'EXIT_DB',
      label: 'MSSQL',
      backendName: "MSSql Express",
